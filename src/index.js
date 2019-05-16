@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const html2pug = require('html2pug');
-const fixTabs = require('./fixTabs');
+const fixTabs = require('./src/fixTabs');
 
 function convert (options = {src: './html-snippets.json', dist: './pug-snippets.json'}) {
   let htmlSnippets = fs.readFileSync(options.src, {encoding: 'utf-8'})
@@ -10,7 +10,7 @@ function convert (options = {src: './html-snippets.json', dist: './pug-snippets.
   for (let key in pugSnippets) {
     let htmlBody = pugSnippets[key].body.join(' ').replace(/\t/g, '');
     console.log(htmlBody)
-    let pugBody = html2pug(htmlBody, { useTabs: true, isFragment: true });
+    let pugBody = html2pug(htmlBody, { tabs: true, isFragment: true });
     pugSnippets[key].body = fixTabs(pugBody.split('\n'));
   }
   fs.writeFileSync(options.dist, JSON.stringify(pugSnippets, null, 4));

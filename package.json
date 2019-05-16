@@ -2,13 +2,13 @@
   "name": "vsc-snippets-html2pug",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "html2pug": "^3.0.0"
+    "html2pug": "^4.0.0"
   }
 }
