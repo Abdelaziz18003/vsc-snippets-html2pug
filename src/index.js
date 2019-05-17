@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const html2pug = require('html2pug');
-const fixTabs = require('./fixTabs');
+const { fixTabs } = require('./helpers');
 
 function convert (options) {
   if (options.src && options.dist) {

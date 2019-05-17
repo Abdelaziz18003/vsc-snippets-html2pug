@@ -9,9 +9,14 @@ function fixTabs (array) {
     } else {
       previousTag = getTag(string);
     }
+    string = fixQuotes(string);
     return string;
   })
   return newArray;
+}
+
+function fixQuotes (string) {
+  return string.replace(/\\'/g, "'")
 }
 
 function indent (string, level) {
@@ -29,4 +34,6 @@ function getTag (string) {
   return {tagName: tag, level: startingIndex};
 }
 
-module.exports = fixTabs
+module.exports = {
+  fixTabs
+}
