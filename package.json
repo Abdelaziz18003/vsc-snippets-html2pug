@@ -1,7 +1,11 @@
 {
   "name": "vsc-snippets-html2pug",
   "version": "0.1.0",
-  "description": "",
+  "description": "A tool to automatically generate VSCode Pug snippets out of HTML ones.",
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/Abdelaziz18003/vsc-snippets-html2pug.git"
+	},
   "main": "src/index.js",
   "bin": {
     "vsc-snippets-html2pug": "src/cli.js"
@@ -9,8 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Abdelaziz Mokhnache",
+  "license": "MIT",
   "dependencies": {
     "html2pug": "^4.0.0"
   }
