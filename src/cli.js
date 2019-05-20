@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 "use strict";
-const { convert } = require('./index');
+const generatePugSnippets = require('./index');
 
 const cliOptions = ['--src', '--dist'];
 const help = `
@@ -43,5 +43,5 @@ if (process.argv.length === 2 || process.argv.includes('help')) {
   printHelp()
 } else {
   const options = parseArgv();
-  convert(options);
+  generatePugSnippets(options);
 }
