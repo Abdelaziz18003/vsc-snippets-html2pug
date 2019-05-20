@@ -3,6 +3,13 @@
 const fs = require('fs');
 const { transformSnippets, writeSnippetsFile } = require('./helpers');
 
+/**
+ * Generate VSCode Pug snippets out of html ones
+ * 
+ * @param {Object} options
+ * Options object, required fields are `src` and `dist`.
+ */
+
 function generatePugSnippets (options) {
   if (options.src && options.dist) {
     const htmlSnippets = fs.readFileSync(options.src, {encoding: 'utf-8'});
